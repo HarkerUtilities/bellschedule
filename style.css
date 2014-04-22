@@ -284,3 +284,8 @@ table{
 	-ms-user-select: none;
 	user-select: none;
 }
+#CurrentTime{
+	font-size: 1.2em;
+	text-align: left;
+	padding: 5px 0 0 0;
+}
