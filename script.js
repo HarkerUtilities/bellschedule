@@ -10,8 +10,7 @@ var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 var urlParams; //object with GET variables as properties and their respective values as values
 var schedules; //array of schedules (each schedule is an array in this array
 var dispWeek; //Sunday of week currently being displayed by the schedule
-//var mobile = isMobile();
-var mobile = true;
+var mobile = isMobile();
 var updateScheduleID; //ID of interval of updateSchedule
 var options = new Object();
 
