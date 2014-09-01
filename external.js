@@ -28,7 +28,7 @@ function signIn() {
 				},
 				error: function() {
 		$('#signin').val('Personalize');
-					alert('Something went wrong. Please try again.');
+					alert('logging in to Harker database failed. Either try to re-enter your username and password or log the issue at https://github.com/HarkerDev/bellschedule');
 				}
 			});
 	} else {
@@ -44,7 +44,7 @@ function signIn() {
 				},
 				error: function() {
 		$('#signin').val('Personalize');
-					alert('Something went wrong. Please try again.');
+					alert('logging in to Harker database failed. Either try to re-enter your username and password or log the issue at https://github.com/HarkerDev/bellschedule');
 				}
 			});
 	}
@@ -63,7 +63,7 @@ function loadSchedule(cookie_string) {
 			showSchedule(data);
 		},
 		error: function() {
-			alert('Something went wrong. Please try again.');
+			alert('logging in to Harker database failed. Either try to re-enter your username and password or log the issue at https://github.com/HarkerDev/bellschedule');
 		}
 	});
 	$('#options').hide();
@@ -99,7 +99,7 @@ function showSchedule(data) {
 			html += '</tr>';
 			$('#schedule').html(html.replace('<td></td>', ''));
 
-			$('#schedule td').last().append('<p style="text-align:right; margin-right: 5px;">Powered by <a href="http://notpri.me/harkerX/">harkerX</a></p>');
+			$('#schedule td').last().append('<p style="text-align:right; margin-right: 5px;">Powered by <a href="http://notpri.me/harkerX/?id=' + $('#username').val() + '">harkerX</a></p>');
 			$('#authenticate').hide();
 			$('#leftArrow').hide();
 			$('#rightArrow').hide();
@@ -135,7 +135,4 @@ function highlightSchedule() {
 
 		}
 	});
-	setTimeout(function() {
-		highlightSchedule();
-	}, 5000); // reload every five seconds
 }
