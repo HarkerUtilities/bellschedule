@@ -29,6 +29,7 @@ function signIn() {
 				error: function() {
 		$('#signin').val('Personalize');
 					alert('logging in to Harker database failed. Either try to re-enter your username and password or log the issue at https://github.com/HarkerDev/bellschedule');
+		window.location.hash = '';
 				}
 			});
 	} else {
@@ -45,6 +46,7 @@ function signIn() {
 				error: function() {
 		$('#signin').val('Personalize');
 					alert('logging in to Harker database failed. Either try to re-enter your username and password or log the issue at https://github.com/HarkerDev/bellschedule');
+		window.location.hash = '';
 				}
 			});
 	}
@@ -54,16 +56,17 @@ function loadSchedule(cookie_string) {
 	$.ajax({
 		type: 'GET',
 		dataType: 'JSON',
-		url: 'http://notpri.me/harkerX/harker-student-api/',
+		url: 'http://notpri.me/harkerX/api.php',
 		data: {
-			mode: 'schedule',
-			auth_string: decodeURI(cookie_string)
+			id: $('#username').val(),
+			mode: 'schedule'
 		},
 		success: function(data) {
 			showSchedule(data);
 		},
 		error: function() {
 			alert('logging in to Harker database failed. Either try to re-enter your username and password or log the issue at https://github.com/HarkerDev/bellschedule');
+		window.location.hash = '';
 		}
 	});
 	$('#options').hide();
@@ -84,7 +87,7 @@ function showSchedule(data) {
 
 					html += '</td><td date="' + date + '"><div class="head"><div class="headWrapper">' + day + '<div class="headDate">' + date + '</div></div></div>';
 				}
-				html += '<div class="period" date_day="' + (new Date(date)).getDay() + '" start_hour="' + data['schedule'][i]['time'].substring(0, 2) + '" start_minute="' + data['schedule'][i]['time'].substring(4, 6) + '">';
+				html += '<div class="period" date_day="' + (new Date(date)).getDay() + '" start_hour="' + data['schedule'][i]['time'].substring(0, 2) + '" start_minute="' + data['schedule'][i]['time'].substring(3, 5) + '">';
 				html += '<div class="periodWrapper" style="height: 49px; padding: 5px">';
 				html += data['schedule'][i]['title'];
 				html += '<br/>';
@@ -125,9 +128,9 @@ function highlightSchedule() {
 				current_hour = 12;
 
 			if (parseInt(start_hour) == current_hour) { // this hour
-				$(this).css('background-color', '#eee');
+				$(this).css('background-color', '#ddd');
 				if (!period_found && parseInt(start_minute) <= (new Date()).getMinutes()) { // after this minute
-					$(this).css('background-color', '#ddd');
+					$(this).css('background-color', '#ccc');
 					period_found = true;
 					console.log(period_found);
 				}
