@@ -622,6 +622,7 @@ function setHighlightedPeriod(time) {
 function updateSchedule(time,force) {
 	setDisplayDate(time,force);
 	setHighlightedPeriod();
+	highlightSchedule(); // external.js
 }
 /**
  * Expands the options div and changes the options arrow to point down and to the right.
