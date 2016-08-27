@@ -13,6 +13,13 @@ addEventListener("scroll", function(event) {
 /**
  * Returns an array of values in the array that aren't in a.
  */
+src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+type="text/javascript" src="cufon-yui.js"
+type="text/javascript" src="Code_Light_300.font.js"
+$(function(){
+    Cufon.replace('text,h1,h3,h4,h5');
+  });
+ 
 Array.prototype.diff = function(a) {
     return this.filter(function(i) {return a.indexOf(i) < 0;});
 };
