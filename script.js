@@ -76,6 +76,8 @@ var MILLIS_PER_DAY = 1000 * 60 * 60 * 24;
 
     //update history state
     window.history.replaceState(getDateFromUrlParams(), document.title, document.location);
+    
+    Cufon.replace('text,h1,h3,h4,h5');
 }());
 
 /**
