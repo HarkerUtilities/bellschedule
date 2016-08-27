@@ -272,8 +272,7 @@ function warn(text) {
     if(text) warning.style.display = "block";
     else warning.style.display = "none";
 
-type="text/javascript" src="cufon-yui.js"
-type="text/javascript" src="Code_Light_300.font.js"
+
 Cufon.replace('text,h1,h3,h4,h5');
     warning.innerHTML = text;
 }
