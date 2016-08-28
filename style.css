@@ -195,12 +195,15 @@ table{
 	width: inherit;
 	overflow: hidden;
 	line-height: 110%;
+	font-family:Century Gothic,arial,sans-serif;
 }
 .periodWrapper, .headWrapper{
 	display: table-cell;
 	width: inherit;
 	border-bottom: 1px solid black;
 	vertical-align: middle;
+	font-family:Century Gothic,arial,sans-serif;
+	
 }
 .periodLength{
 	font-size: .8em;
