@@ -3,9 +3,6 @@
  * Hosted at http://harkerdev.github.io/bellschedule
  **/
 
-$.getScript("cufon-yui.js", "Code_Light_300.font.js", function(){
-	Cufon.replace('text,h1,h3,h4,h5,br');
-}
 /**
  * CSS things
  */
