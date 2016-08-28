@@ -44,7 +44,7 @@ a{
 
 body{
 	margin: 0;
-	font: .75em "Segoe UI", "Arial", sans-serif;
+	font: .75em "Century Gothic", "Arial", sans-serif;
 	text-align: center;
 	background-position-x: center;
 }
@@ -195,14 +195,14 @@ table{
 	width: inherit;
 	overflow: hidden;
 	line-height: 110%;
-	font-family:Century Gothic,arial,sans-serif;
+	
 }
 .periodWrapper, .headWrapper{
 	display: table-cell;
 	width: inherit;
 	border-bottom: 1px solid black;
 	vertical-align: middle;
-	font-family:Century Gothic,arial,sans-serif;
+	
 	
 }
 .periodLength{
