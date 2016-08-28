@@ -272,8 +272,6 @@ function warn(text) {
     if(text) warning.style.display = "block";
     else warning.style.display = "none";
 
-
-Cufon.replace('text,h1,h3,h4,h5');
     warning.innerHTML = text;
 }
 
