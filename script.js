@@ -13,6 +13,8 @@ addEventListener("scroll", function(event) {
 /**
  * Returns an array of values in the array that aren't in a.
  */
+
+ 
 Array.prototype.diff = function(a) {
     return this.filter(function(i) {return a.indexOf(i) < 0;});
 };
@@ -74,6 +76,7 @@ var MILLIS_PER_DAY = 1000 * 60 * 60 * 24;
 
     //update history state
     window.history.replaceState(getDateFromUrlParams(), document.title, document.location);
+    
 }());
 
 /**
@@ -210,7 +213,7 @@ function setDisplayDate(time, force) {
 
 	displayDate = new Date(date);
 
-	displayMessage = "Welcome back! Tell a freshman about <a href='http://tiny.cc/bellschedule'>tiny.cc/bellschedule</a>.";
+	displayMessage = "Welcome back! Tell a freshman about <a href='mailto:?subject=Check%20Out%20Tiny.cc/bellschedule&amp;body=Go%20to%20tiny.cc/bellschedule%20on%20your%20phone,%20tablet,%20or%20computer%20to%20see%20the%20bell%20schedule%20for%20each%20day!'>tiny.cc/bellschedule</a>.";
 
 	if(getMonday(date) > getMonday(new Date()))
 	    displayMessage += "<br>This is a future date, so the schedule may be incorrect. (In particular, special/alternate schedules may be missing.)"; //display warning if date is in the future

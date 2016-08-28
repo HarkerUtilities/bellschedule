@@ -44,7 +44,7 @@ a{
 
 body{
 	margin: 0;
-	font: .75em "Segoe UI", "Arial", sans-serif;
+	font: .75em 'Raleway', sans-serif;
 	text-align: center;
 	background-position-x: center;
 }
@@ -124,6 +124,7 @@ h1{
 }
 
 #warning{
+	font: 1.0em "Century Gothic", "Arial", sans-serif;
 	display:none;
 	margin-bottom: 1em;
 }
@@ -194,12 +195,15 @@ table{
 	width: inherit;
 	overflow: hidden;
 	line-height: 110%;
+	
 }
 .periodWrapper, .headWrapper{
 	display: table-cell;
 	width: inherit;
 	border-bottom: 1px solid black;
 	vertical-align: middle;
+	
+	
 }
 .periodLength{
 	font-size: .8em;
