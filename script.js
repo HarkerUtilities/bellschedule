@@ -272,7 +272,7 @@ function warn(text) {
     if(text) warning.style.display = "block";
     else warning.style.display = "none";
 
-    warning.innerHTML = cufon;
+    warning.innerHTML = <cufon>text</cufon>;
 }
 
 /**
