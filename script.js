@@ -13,6 +13,8 @@ addEventListener("scroll", function(event) {
 /**
  * Returns an array of values in the array that aren't in a.
  */
+
+ 
 Array.prototype.diff = function(a) {
     return this.filter(function(i) {return a.indexOf(i) < 0;});
 };
@@ -76,6 +78,7 @@ var MILLIS_PER_DAY = 1000 * 60 * 60 * 24;
 
     //update history state
     window.history.replaceState(getDateFromUrlParams(), document.title, document.location);
+    
 }());
 
 /**
